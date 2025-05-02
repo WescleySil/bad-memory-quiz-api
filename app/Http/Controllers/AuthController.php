@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\auth\LoginRequest;
-use App\Services\auth\LoginService;
-use Illuminate\Http\Client\Request;
+use App\Http\Requests\Auth\LoginRequest;
+use App\Services\Auth\LoginService;
 use Illuminate\Http\JsonResponse;
 
 class AuthController extends Controller
