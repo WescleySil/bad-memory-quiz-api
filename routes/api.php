@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuizController;
@@ -42,6 +43,12 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/', [QuestionController::class, 'store']);
         Route::put('/{question}', [QuestionController::class, 'update']);
         Route::delete('/{question}', [QuestionController::class, 'destroy']);
+    });
 
+    Route::prefix('/answers')->group(function () {
+        Route::get('/', [AnswerController::class, 'index']);
+        Route::post('/', [AnswerController::class, 'store']);
+        Route::put('/{answer}', [AnswerController::class, 'update']);
+        Route::delete('/{answer}', [AnswerController::class, 'destroy']);
     });
 });

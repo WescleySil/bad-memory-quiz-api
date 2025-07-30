@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Question\IndexQuestionRequest;
-use App\Http\Requests\StoreQuestionRequest;
-use App\Http\Requests\UpdateQuestionRequest;
+use App\Http\Requests\Question\StoreQuestionRequest;
+use App\Http\Requests\Question\UpdateQuestionRequest;
 use App\Http\Resources\QuestionResource;
 use App\Models\Question;
 use App\Services\Question\IndexQuestionService;
